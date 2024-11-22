@@ -1,0 +1,19 @@
+<!-- app/views/admin/categories/new.html.erb -->
+<section class="admin-categories-new">
+  <header class="page-header">
+    <h1>Admin &raquo; New Category</h1>
+  </header>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= form_with model: @category, url: admin_categories_path, local: true do |form| %>
+        <div class="form-group">
+          <%= form.label :name, "Category Name" %>
+          <%= form.text_field :name, class: 'form-control' %>
+        </div>
+
+        <%= form.submit 'Create Category', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</section>
